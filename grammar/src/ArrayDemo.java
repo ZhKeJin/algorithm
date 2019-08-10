@@ -4,7 +4,7 @@ import javafx.geometry.Pos;
  * @author Zhangkj
  * @date 2019-07-25-20:43
  */
-public class ArrayTest {
+public class ArrayDemo {
 
     public static void main(String[] args) {
         //数组
@@ -23,7 +23,7 @@ public class ArrayTest {
             System.out.println(arr1[i]);
         }
 
-
+        System.out.println();
         //二维数组
 
         //  1
@@ -80,6 +80,12 @@ public class ArrayTest {
 
         toHex_2(-60);
 
+        System.out.println("——————————————————");
+
+        int[][] ar2 = new int[3][4] ;
+
+        System.out.println(ar2.length);
+        System.out.println(ar2[0].length);
 
     }
 
@@ -246,3 +252,63 @@ public class ArrayTest {
     }
 
 }
+
+
+
+/*
+ //Definition for a binary tree node.
+  public class TreeNode {
+    int val;
+     TreeNode left;
+      TreeNode right;
+      TreeNode(int x) { val = x; }
+ }
+public class Solution {
+
+    public TreeNode reConstructBinaryTree(int [] pre,int [] in) {
+
+        TreeNode root=reConstructBinaryTree(pre,0,pre.length-1,in,0,in.length-1);
+
+        return root;
+
+    }
+
+    //前序遍历{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}
+
+    private TreeNode reConstructBinaryTree(int [] pre,int startPre,int endPre,int [] in,int startIn,int endIn) {
+
+
+
+        if(startPre>endPre||startIn>endIn)
+
+            return null;
+
+        TreeNode root=new TreeNode(pre[startPre]);
+
+
+
+        for(int i=startIn;i<=endIn;i++)
+
+            if(in[i]==pre[startPre]){
+
+                root.left=reConstructBinaryTree(pre,startPre+1,startPre-startIn+i,in,startIn,i-1);
+
+                root.right=reConstructBinaryTree(pre,startPre-startIn+i+1,endPre,in,i+1,endIn);
+
+                break;
+
+            }
+
+
+
+        return root;
+
+    }
+
+}
+
+*/
+
+
+
+

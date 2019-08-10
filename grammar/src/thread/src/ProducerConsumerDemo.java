@@ -1,5 +1,6 @@
 package thread.src;
 
+import com.sun.org.apache.bcel.internal.generic.NEW;
 import com.sun.org.apache.regexp.internal.RE;
 import sun.applet.Main;
 
@@ -12,6 +13,8 @@ class Resources{
     private boolean flag = false;
     private String name;
     private int count = 1;
+
+
 
     public synchronized void set(String name){
 

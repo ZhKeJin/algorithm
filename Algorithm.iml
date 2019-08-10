@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <output url="file://E:/data/Java-算法与数据结构/笔记、代码、课件、资料/代码/Algorithm/bin" />
+    <exclude-output />
+    <content url="file://E:/data/Java-算法与数据结构/笔记、代码、课件、资料/代码/Algorithm">
+      <sourceFolder url="file://E:/data/Java-算法与数据结构/笔记、代码、课件、资料/代码/Algorithm/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+  </component>
+</module>

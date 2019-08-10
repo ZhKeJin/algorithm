@@ -1,6 +1,5 @@
 package thread.src;
 
-import java.util.concurrent.locks.Lock;
 
 /**
  * @author Zhangkj
