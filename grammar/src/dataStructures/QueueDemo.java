@@ -21,7 +21,7 @@ public class QueueDemo {
         ((LinkedList<String>) queue).offerFirst("asdf1111");
         ((LinkedList<String>) queue).offerFirst("asdf111111");
 
-        while(!queue.isEmpty()) {
+        while (!queue.isEmpty()) {
             System.out.println(((LinkedList<String>) queue).pollLast());
         }
 
@@ -37,7 +37,6 @@ public class QueueDemo {
 
             System.out.println(string);
         }
-
 
 
     }
