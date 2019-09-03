@@ -18,7 +18,7 @@ import java.util.Scanner;
  *
  * 来源：力扣（LeetCode）
  */
-public class IPAddresses93 {
+public class leedcode93 {
 
     public static void main(String[] args) {
 
