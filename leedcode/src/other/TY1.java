@@ -48,6 +48,7 @@ public class TY1 {
 
 
 
+
         for (int i = 0; i < length; i++) {
             for (int j = 0; j <= i; j++) {
                 if ("T".equals(tyList.get(i))) {

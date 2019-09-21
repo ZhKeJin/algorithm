@@ -6,11 +6,16 @@ package thread.src;
  */
 public class MathTest {
 
+    protected void fun(){}
+
+    void fun1(){}
+
     public static void main(String[] args) {
 
         System.out.println(Math.round(-9.5));
 
     }
+
 
 
 }
