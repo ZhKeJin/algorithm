@@ -17,5 +17,14 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/资料/传智播客JavaWeb-源码笔记/day18JDBC第二天/day18_code/day18_4/WebRoot/WEB-INF/lib/mysql-connector-java-5.1.28-bin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

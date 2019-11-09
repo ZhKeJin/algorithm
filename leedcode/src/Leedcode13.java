@@ -12,7 +12,6 @@ public class Leedcode13 {
         Scanner scanner = new Scanner(System.in);
 
         String string = scanner.nextLine();
-
         System.out.println(new Leedcode13().romanToInt(string));
     }
 

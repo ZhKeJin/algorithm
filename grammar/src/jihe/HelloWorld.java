@@ -1,4 +1,4 @@
-
+package jihe;
 
 /**
  * @author Zhangkj

@@ -1,3 +1,5 @@
+package jihe;
+
 import javafx.geometry.Pos;
 
 /**
@@ -5,6 +7,14 @@ import javafx.geometry.Pos;
  * @date 2019-07-25-20:43
  */
 public class ArrayDemo {
+
+
+    void fun(){}
+
+    protected void fun1(){}
+    private void fun2(){}
+
+
 
     public static void main(String[] args) {
         //数组

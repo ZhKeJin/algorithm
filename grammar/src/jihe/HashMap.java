@@ -1,3 +1,5 @@
+package jihe;
+
 import java.util.*;
 
 /**
@@ -29,7 +31,7 @@ class Student implements Comparable<Student>
         this.age = age;
     }
 
-   /* public int compareTo(Student s)
+   /* public int compareTo(jihe.Student s)
     {
         int num = new Integer(this.age).compareTo(new Integer(s.age));
 
@@ -90,7 +92,7 @@ class HashMapsadf {
         HashMap hm = new HashMap();
 
        /* TreeMap<Integer, String> objectObjectTreeMap = new TreeMap<>();
-        TreeMap<Student, String> hm = new TreeMap<>();*/
+        TreeMap<jihe.Student, String> hm = new TreeMap<>();*/
 
 //        objectObjectTreeMap.put(1,"asdf");
 //        objectObjectTreeMap.put(1,"asdf");
@@ -123,21 +125,21 @@ class HashMapsadf {
         hm.put(1,"asd");
         hm.put(1,"asd");
 
-        hm.put(new Student("lisi1",21),"beijing");
-        hm.put(new Student("lisi1",21),"tianjin");
-        hm.put(new Student("lisi2",22),"shanghai");
-        hm.put(new Student("lisi3",23),"nanjing");
-        hm.put(new Student("lisi4",24),"wuhan");
+        hm.put(new jihe.Student("lisi1",21),"beijing");
+        hm.put(new jihe.Student("lisi1",21),"tianjin");
+        hm.put(new jihe.Student("lisi2",22),"shanghai");
+        hm.put(new jihe.Student("lisi3",23),"nanjing");
+        hm.put(new jihe.Student("lisi4",24),"wuhan");
 
         //第一种取出方式 keySet
 
-        Set<Student> keySet = hm.keySet();
+        Set<jihe.Student> keySet = hm.keySet();
 
-        Iterator<Student> it = keySet.iterator();
+        Iterator<jihe.Student> it = keySet.iterator();
 
         while(it.hasNext())
         {
-            Student stu = it.next();
+            jihe.Student stu = it.next();
             String addr = (String) hm.get(stu);
             System.out.println(stu+".."+addr);
         }
@@ -145,14 +147,14 @@ class HashMapsadf {
 
 
         //第二种取出方式 entrySet
-        Set<Map.Entry<Student,String>> entrySet = hm.entrySet();
+        Set<Map.Entry<jihe.Student,String>> entrySet = hm.entrySet();
 
-        Iterator<Map.Entry<Student,String>> iter = entrySet.iterator();
+        Iterator<Map.Entry<jihe.Student,String>> iter = entrySet.iterator();
 
         while(iter.hasNext())
         {
-            Map.Entry<Student,String> me = iter.next();
-            Student stu = me.getKey();
+            Map.Entry<jihe.Student,String> me = iter.next();
+            jihe.Student stu = me.getKey();
             String addr = me.getValue();
             System.out.println(stu+"........."+addr);
         }*/
