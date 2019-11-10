@@ -6,7 +6,7 @@ package link;
  */
 
 /**
- * 删除链表中的倒数 第 K个节点
+ * 删除链表中的倒数 第 K个节点.
  */
 public class Leedcode19 {
 
