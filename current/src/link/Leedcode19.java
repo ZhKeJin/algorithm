@@ -4,6 +4,10 @@ package link;
  * @author Zhangkj
  * @date 2019-11-09-5:03
  */
+
+/**
+ * 删除链表中的倒数 第 K个节点
+ */
 public class Leedcode19 {
 
     public static void main(String[] args) {

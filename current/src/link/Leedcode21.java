@@ -1,19 +1,21 @@
 package link;
-/**
- * 合并两个有序链表：将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
- */
 
 /**
  * @author Zhangkj
  * @date 2019-11-09-5:38
+ */
+
+
+/**
+ * 合并两个有序链表：将两个有序链表合并为一个新的有序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  */
 public class Leedcode21 {
     public static void main(String[] args) {
         ListNode head1 = new ListNode(1);
         ListNode head2 = new ListNode(1);
         ListNode head3 = new ListNode(2);
- //       ListNode head4 = new ListNode(2);
-   //     ListNode head5 = new ListNode(3);
+        //       ListNode head4 = new ListNode(2);
+        //     ListNode head5 = new ListNode(3);
 
 
         ListNode hea1 = new ListNode(1);
@@ -24,8 +26,8 @@ public class Leedcode21 {
 
         head1.next = head2;
         head2.next = head3;
-     //   head3.next = head4;
-       // head4.next = head5;
+        //   head3.next = head4;
+        // head4.next = head5;
 
         hea1.next = hea2;
         hea2.next = hea3;
