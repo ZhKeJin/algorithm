@@ -4,7 +4,6 @@ import com.sun.org.apache.xerces.internal.util.EntityResolverWrapper;
 import jihe.Arraylist;
 import org.junit.Test;
 import org.junit.experimental.max.CouldNotReadCoreException;
-import sun.util.resources.th.CalendarData_th;
 
 import java.util.*;
 import java.util.concurrent.*;
@@ -94,7 +93,7 @@ public class CollectionDemo {
 //        String;
 //        String a = new String("dasdf");
 
-        ConcurrentHashMap;
+  //      ConcurrentHashMap;
 
         Object o = "a";
 

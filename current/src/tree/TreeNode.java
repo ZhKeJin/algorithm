@@ -13,4 +13,14 @@ public class TreeNode {
     public TreeNode(int val) {
         this.val = val;
     }
+
+    public static void bianli(TreeNode root){
+
+        if(root!=null){
+            System.out.println(root.val);
+            bianli(root.left);
+            bianli(root.right);
+        }
+
+    }
 }

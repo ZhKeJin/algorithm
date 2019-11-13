@@ -4,6 +4,7 @@ import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
 
 import javax.swing.*;
 import java.io.InputStream;
+import java.util.Queue;
 
 /**
  * @author Zhangkj
@@ -31,7 +32,7 @@ public class Leedcode83 {
 
 
 
-          ListNode temp = deleteDuplicates_1(head);
+          ListNode temp = deleteDuplicates_2(head);
 
           while(temp!=null){
                System.out.print(temp.val+"  ");
@@ -41,6 +42,19 @@ public class Leedcode83 {
 
      }
 
+     public static ListNode deleteDuplicates_4(ListNode head) {
+
+          ListNode p=head,q=p.next;
+
+          while(q!=null){
+
+
+          }
+
+          return head;
+
+
+     }
 
      public static ListNode deleteDuplicates(ListNode head) {
 
@@ -56,6 +70,26 @@ public class Leedcode83 {
           }
 
           return head;
+
+     }
+
+     public static ListNode deleteDuplicates_2(ListNode head) {
+
+          ListNode p=head,q=p.next;
+
+          while(q.next!=null){
+               while (p.val==q.val){
+                    q=q.next;
+               }
+
+               p.next=q;
+               p = p.next;
+
+               q=q.next;
+          }
+
+          return head;
+
 
      }
 
