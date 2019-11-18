@@ -12,7 +12,6 @@ public class Test1 {
 
     public static void main(String[] args) {
 
-//        Thread;
 
         System.out.println(fun(3));
 
