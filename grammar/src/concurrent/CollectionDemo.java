@@ -54,7 +54,18 @@ public class CollectionDemo {
 
         new CopyOnWriteArrayList<String>();
 
+//        String;
+//        Integer;
+
         WeakHashMap<String, String> stringStringWeakHashMap = new WeakHashMap<>();
+
+        //hreadPoolExecutor;
+        Executors.newFixedThreadPool(7);
+        Executors.newScheduledThreadPool(3);
+        Executors.newScheduledThreadPool(3);
+        Executors.newCachedThreadPool();
+
+
 
         ///////////////////////////////////////
 //        AbstractQueuedSynchronizer;
@@ -75,7 +86,7 @@ public class CollectionDemo {
 //        ThreadPoolExecutor;
 //
 //
-//        ArrayBlockingQueue;
+ //       ArrayBlockingQueue;
 //
 //        LinkedBlockingQueue;
 //
