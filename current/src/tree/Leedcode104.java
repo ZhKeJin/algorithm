@@ -41,7 +41,7 @@ public class Leedcode104 {
         root2.left = root3;
         root2.right = root4;
 
-        System.out.println(maxDepth(root));
+        System.out.println(maxDepth_1(root,0));
 
     }
 

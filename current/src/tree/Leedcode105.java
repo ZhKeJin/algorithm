@@ -5,6 +5,7 @@ package tree;
  * @date 2019-11-10-22:22
  */
 
+import com.sun.media.sound.SoftTuning;
 import sun.reflect.generics.tree.Tree;
 import sun.rmi.server.InactiveGroupException;
 
@@ -60,7 +61,12 @@ public class Leedcode105 {
         for (int i : inorder) {
 
             integerIntegerHashMap.put(i,inx++);
+
+
         }
+
+        System.out.println(integerIntegerHashMap.get(9));
+
 
 //        for (Integer integer : integerIntegerHashMap.keySet()) {
 //            Integer integer1 = integerIntegerHashMap.get(integer);

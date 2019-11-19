@@ -30,6 +30,7 @@ public class Threadlocal {
 
         System.out.println(random.nextInt(5));
 
+   //     LinkedList;
 //
 //        LockSupport lockSupport = new LockSupport();
 //

@@ -1,7 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Zhangkj
@@ -34,6 +33,8 @@ import java.util.List;
  */
 public class Leedcode107 {
 
+
+    static List<List<Integer>> list= new ArrayList<>();
     public static void main(String[] args) {
 
         TreeNode root = new TreeNode(3);
@@ -47,15 +48,46 @@ public class Leedcode107 {
         root2.left = root3;
         root2.right = root4;
 
-        levelOrderBottom(root);
+        list = levelOrderBottom(root);
+
+        for (List<Integer> objects : list) {
+
+            System.out.println(objects);
+        }
     }
 
-    public static List<List<Integer>> levelOrderBottom(TreeNode root) {
+    static List<List<Integer>> levelOrderBottom(TreeNode root) {
 
-        ArrayList<List<Integer>> lists = new ArrayList<>();
+        if(root==null)return list;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()){
+
+            List<Integer> l = new LinkedList<>();
+
+            int count = queue.size();
+            while(count>0){
+
+                TreeNode node = queue.peek();
+                queue.poll();
+                l.add(node.val);
+
+                if(node.left!=null) queue.add(node.left);
+                if(node.right!=null) queue.add(node.right);
 
 
-        return lists;
+                count--;
+            }
+
+            list.add(l);
+
+        }
+        Collections.reverse(list);
+
+
+        return list;
 
     }
 }
