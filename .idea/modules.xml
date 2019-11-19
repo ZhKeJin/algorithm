@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/current/current.iml" filepath="$PROJECT_DIR$/current/current.iml" />
       <module fileurl="file://$PROJECT_DIR$/grammar/grammar.iml" filepath="$PROJECT_DIR$/grammar/grammar.iml" />
       <module fileurl="file://$PROJECT_DIR$/leedcode/leedcode.iml" filepath="$PROJECT_DIR$/leedcode/leedcode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../javatest/parkmanage/parkmanage.iml" filepath="$PROJECT_DIR$/../javatest/parkmanage/parkmanage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java1/springbootpark/springbootpark.iml" filepath="$PROJECT_DIR$/../java1/springbootpark/springbootpark.iml" />
     </modules>
   </component>
 </project>
