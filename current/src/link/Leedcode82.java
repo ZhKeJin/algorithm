@@ -29,8 +29,8 @@ public class Leedcode82 {
         ListNode head = new ListNode(1);
         ListNode head2 = new ListNode(1);
         ListNode head3 = new ListNode(2);
-        ListNode head4 = new ListNode(2);
-        ListNode head5 = new ListNode(3);
+        ListNode head4 = new ListNode(4);
+        ListNode head5 = new ListNode(4);
         ListNode head6 = new ListNode(4);
         ListNode head7 = new ListNode(4);
 
@@ -43,7 +43,7 @@ public class Leedcode82 {
 
 
 
-        ListNode temp = deleteDuplicates(head);
+        ListNode temp = deleteDuplicates_4(head);
 
         while(temp!=null){
             System.out.print(temp.val+"  ");
@@ -77,5 +77,52 @@ public class Leedcode82 {
         return head;
 
     }
+
+    public static ListNode deleteDuplicates_2(ListNode head) {
+
+        ListNode p = head;
+        ListNode t = p.next;
+
+        while(t.next!=null){
+            if (t.val == p.val){
+                t= t.next;
+            }else{
+                p.next=t;
+                p=t;
+                t=t.next;
+            }
+//            System.out.println(p + ", " + t);
+        }
+
+        p.next = t.next;
+
+        return head;
+    }
+
+    public static ListNode deleteDuplicates_3(ListNode head) {
+        if (head.next==null){
+            return head;
+        }
+        if (head.val == head.next.val){
+            return deleteDuplicates_3(head.next);
+        }else{
+            head.next = deleteDuplicates_3(head.next);
+            return head;
+        }
+    }
+
+    public static ListNode deleteDuplicates_4(ListNode head) {
+        System.out.println(head);
+        if (head.next==null){
+            return head;
+        }
+        if (head.val == head.next.val){
+            head.next = deleteDuplicates_4(head.next);
+        }else{
+            deleteDuplicates_3(head.next);
+        }
+        return head;
+    }
+
 
 }

@@ -49,10 +49,13 @@ public class Leedcode19 {
             /*
             注意边界容易空指针异常
              */
+            System.out.println(q.val);
             if(q==null){
                 return head.next;
             }
         }
+
+
 
         while(q.next!=null){
             p=p.next;

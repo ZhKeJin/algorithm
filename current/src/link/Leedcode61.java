@@ -29,7 +29,7 @@ public class Leedcode61 {
         head5.next = head6;
         head6.next = head7;
 
-        ListNode temp = rotateRight(head, 10);
+        ListNode temp = rotateRight(head, 7);
         while (temp != null) {
             System.out.print(temp.val + "  ");
             temp = temp.next;
@@ -57,33 +57,57 @@ public class Leedcode61 {
 
         System.out.println(n);
 
-        int B = k > n ? k % n : k;
+        int B = k >= n ? k % n : k;
+
+        if(B==0){
+            return head;
+        }
+
+
 
         ListNode p = head;
         ListNode h = head;
-        ListNode q = head.next;
+        ListNode q = head;
 
 
-        for (int i = 0; i < B; i++) {
+        for (int i = 0; i <B; i++) {
+            q=q.next;
 
-            while (q.next != null) {
-
-                p = p.next;
-                q = p.next;
-
-
-            }
-            q.next = h;
-            p.next = null;
-
-            p = q;
-            q = p.next;
-            h = p;
-            //q= head;
         }
 
+        while (q.next!=null){
+
+            p = p.next;
+            q = q.next;
+
+        }
+        ListNode h2 = p.next;
+
+        p.next = null;
+
+        q.next =h;
+
+
+//        for (int i = 0; i < B; i++) {
+//
+//            while (q.next != null) {
+//
+//                p = p.next;
+//                q = p.next;
+//
+//
+//            }
+//            q.next = h;
+//            p.next = null;
+//
+//            p = q;
+//            q = p.next;
+//            h = p;
+//            //q= head;
+//        }
+
         //q.next = rotateRight(p,k-1);
-        return h;
+        return h2;
     }
 
 }
