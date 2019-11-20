@@ -10,7 +10,7 @@ package array;
  * 也不知道每个数字重复几次。请找出数组中任意一个重复的数字。 例如，如果输入长度为7的数组{2,3,1,0,2,5,3}，
  * 那么对应的输出是第一个重复的数字2。
  */
-public class jz2 {
+public class Jz2 {
 
     public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class jz2 {
 
         int[] duplication = new int[]{};
 //        System.out.println(duplicate_1(ints));
-        System.out.println(duplicate(ints,ints.length,duplication));
+        System.out.println(duplicate(ints, ints.length, duplication));
     }
 
 
@@ -28,7 +28,7 @@ public class jz2 {
             return false;
         }
 
-        int temp ;
+        int temp;
         // 判断输入的是否在[0, number.length-1]之间
         for (int i : numbers) {
             if (i < 0 || i >= numbers.length) {
@@ -41,14 +41,14 @@ public class jz2 {
             while (numbers[i] != i) {
 
                 if (numbers[i] == numbers[numbers[i]]) {
-                    duplication[0] = numbers[i];
+                    //  duplication[0] = numbers[i];
                     return true;
                 } else {
 
 //                    swap(numbers, i, numbers[i]);
                     temp = numbers[i];
                     numbers[i] = numbers[numbers[i]];
-                    numbers[numbers[i]] = temp;
+                    numbers[temp] = temp;
                     System.out.println(i);
                 }
 
@@ -58,6 +58,11 @@ public class jz2 {
 
     }
 
+    private static void swap(int[] data, int x, int y) {
+        int tmp = data[x];
+        data[x] = data[y];
+        data[y] = tmp;
+    }
 
     public static int duplicate_1(int[] number) {
         if (number == null || number.length < 1) {
@@ -88,11 +93,7 @@ public class jz2 {
         return -1;
     }
 
-    private static void swap(int[] data, int x, int y) {
-        int tmp = data[x];
-        data[x] = data[y];
-        data[y] = tmp;
-    }
+
 }
 
 

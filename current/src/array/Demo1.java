@@ -1,7 +1,6 @@
 package array;
 
 /**
- *
  * @author Zhangkj
  * @date 2019-11-12-20:45
  */
@@ -17,8 +16,8 @@ public class Demo1 {
 
     public static void main(String[] args) {
 
-        int[] A = {2,4,7,8,11,14,19};
-        int[] B = {21,4,7,48,111,14,19};
+        int[] A = {2, 4, 7, 8, 11, 14, 19};
+        int[] B = {21, 4, 7, 48, 111, 14, 19};
 
         List<Integer> list = new ArrayList<>();
 
@@ -30,35 +29,36 @@ public class Demo1 {
     }
 
 
-    static ArrayList<Integer> search(int[] a, int[] b){
+    static ArrayList<Integer> search(int[] a, int[] b) {
 
 
         ArrayList<Integer> list = new ArrayList<>();
 
         for (int i : b) {
 
-           boolean k = binarysearch(a,i);
-           if(k!=false){
+            boolean k = binarysearch(a, i);
+            if (k != false) {
 
-               list.add(i);
-           }
+                list.add(i);
+            }
         }
 
         return list;
 
     }
-    static boolean binarysearch(int[] a,int i){
 
-        int r = a.length-1;
-        int l=0;
-        while(l<=r){
+    static boolean binarysearch(int[] a, int i) {
 
-            if(i==a[(l+r)/2]){
+        int r = a.length - 1;
+        int l = 0;
+        while (l <= r) {
+
+            if (i == a[(l + r) / 2]) {
                 return false;
             }
-            if(i>a[(l+r)/2]){
-                l= (l+r)/2+1;
-            }else {
+            if (i > a[(l + r) / 2]) {
+                l = (l + r) / 2 + 1;
+            } else {
                 r = (l + r) / 2 - 1;
             }
 

@@ -26,14 +26,14 @@ package array;
 public class Leedcode26 {
 
     public static void main(String[] args) {
-        int[] nums = {0,0,1,1,1,2,2,3,3,4};
+        int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 
         //removeDuplicates(nums);
         System.out.println(removeDuplicates_1(nums));
 
         for (int num : nums) {
 
-            System.out.println(nums[num]+"  "+num);
+            System.out.println(nums[num] + "  " + num);
         }
 
     }
@@ -45,7 +45,7 @@ public class Leedcode26 {
 
             for (int j = i + 1; j < nums.length; j++) {
 
-                if(j==nums.length-1) return i;
+                if (j == nums.length - 1) return i;
                 if (nums[i] == nums[j]) {
                     continue;
                 }
@@ -53,10 +53,10 @@ public class Leedcode26 {
                 if (j - i == 1) {
                     break;
                 } else {
-                    for (int k = 0; k < j - i && (j+k) < nums.length; k++) {
-                        int temp = nums[j+k];
-                        nums[j+k] = nums[i + k+1];
-                        nums[i + k+1] = temp;
+                    for (int k = 0; k < j - i && (j + k) < nums.length; k++) {
+                        int temp = nums[j + k];
+                        nums[j + k] = nums[i + k + 1];
+                        nums[i + k + 1] = temp;
                     }
                 }
 
