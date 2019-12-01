@@ -33,6 +33,8 @@ public class Leedcode82 {
         ListNode head5 = new ListNode(4);
         ListNode head6 = new ListNode(4);
         ListNode head7 = new ListNode(4);
+        ListNode head8 = new ListNode(5);
+        ListNode head9 = new ListNode(5);
 
         head.next = head2;
         head2.next = head3;
@@ -40,10 +42,13 @@ public class Leedcode82 {
         head4.next = head5;
         head5.next = head6;
         head6.next = head7;
+        head7.next = head8;
+        head8.next = head9;
 
 
 
         ListNode temp = deleteDuplicates_4(head);
+//        ListNode temp = deleteDuplicates_2(head);
 
         while(temp!=null){
             System.out.print(temp.val+"  ");
@@ -66,18 +71,13 @@ public class Leedcode82 {
         }
         head.next.next =deleteDuplicates(head.next);
 
-//        while(q.val==q.next.val){
-//
-//            q=q.next;
-//
-//        }
-//
-//        p.next = q.next;
-
         return head;
 
     }
 
+    /*
+    非递归：从后面找到一个不同的连接在与之前不同的后面，注意要让null给最后赋值
+     */
     public static ListNode deleteDuplicates_2(ListNode head) {
 
         ListNode p = head;
@@ -91,10 +91,9 @@ public class Leedcode82 {
                 p=t;
                 t=t.next;
             }
-//            System.out.println(p + ", " + t);
         }
-
-        p.next = t.next;
+        //注意要让null给最后赋值
+        p.next = null;
 
         return head;
     }
@@ -111,6 +110,13 @@ public class Leedcode82 {
         }
     }
 
+
+
+
+
+
+
+
     public static ListNode deleteDuplicates_4(ListNode head) {
         System.out.println(head);
         if (head.next==null){
@@ -121,7 +127,7 @@ public class Leedcode82 {
         }else{
             deleteDuplicates_3(head.next);
         }
-        return head;
+        return head.next;
     }
 
 

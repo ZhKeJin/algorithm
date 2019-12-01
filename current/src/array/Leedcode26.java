@@ -29,7 +29,7 @@ public class Leedcode26 {
         int[] nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 
         //removeDuplicates(nums);
-        System.out.println(removeDuplicates_1(nums));
+        System.out.println(removeDuplicates_2(nums));
 
         for (int num : nums) {
 
@@ -91,6 +91,20 @@ public class Leedcode26 {
 //
 //        }
 //        return i + 1;
+    }
+
+
+    public static int removeDuplicates_2(int[] nums) {
+
+        int j=0;
+        for(int i=1;i<nums.length;i++){
+            if(nums[i]!=nums[j]){
+                nums[++j] = nums[i];
+            }
+
+        }
+        return j+1;
+
     }
 
 }

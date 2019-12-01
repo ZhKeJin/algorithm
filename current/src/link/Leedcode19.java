@@ -39,7 +39,37 @@ public class Leedcode19 {
         }
     }
 
+    /**
+     *
+     * @param head
+     * @param n
+     * @return
+     */
     public static ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode p=head,q=p.next;
+
+        for (int i = 1; i < n; i++) {
+            q=q.next;
+            System.out.println(q);
+        }
+
+        if(q==null){
+            return head.next;
+        }
+        while(q.next!=null){
+            q=q.next;
+            p=p.next;
+        }
+
+        p.next=p.next.next;
+        return head;
+
+
+    }
+
+
+
+    public static ListNode removeNthFromEnd_1(ListNode head, int n) {
 
         ListNode q=head,p=head;
 

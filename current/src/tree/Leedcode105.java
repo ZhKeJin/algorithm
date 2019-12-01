@@ -9,7 +9,9 @@ import com.sun.media.sound.SoftTuning;
 import sun.reflect.generics.tree.Tree;
 import sun.rmi.server.InactiveGroupException;
 
+import javax.swing.plaf.basic.BasicScrollPaneUI;
 import java.util.HashMap;
+import java.util.Vector;
 
 /**
  * 根据一棵树的前序遍历与中序遍历构造二叉树。
@@ -33,6 +35,10 @@ import java.util.HashMap;
  * 链接：https://leetcode-cn.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
+
+/*
+  1.把中序的数组存进hashmap中，每次取先序的节点作为root ，pid++ , 通过root在中序中定位 左右支 进行递归，
+ */
 public class Leedcode105 {
 
     HashMap<Integer, Integer> integerIntegerHashMap = new HashMap<>();
@@ -44,19 +50,17 @@ public class Leedcode105 {
 
         Leedcode105 leedcode105 = new Leedcode105();
         int[] per = {3,9,20,15,7};
-        int[] in = {9,3,15,20,7 };
+        int[] in = {9,3,15,20,7};
 
+
+        new HashMap<>();
         TreeNode.bianli(leedcode105.buildTree(per,in));
-
 
     }
     public TreeNode buildTree(int[] preorder, int[] inorder) {
 
           per = preorder;
           in = inorder;
-
-//        TreeNode root=null;
-
         int inx = 0;
         for (int i : inorder) {
 
@@ -66,14 +70,6 @@ public class Leedcode105 {
         }
 
         System.out.println(integerIntegerHashMap.get(9));
-
-
-//        for (Integer integer : integerIntegerHashMap.keySet()) {
-//            Integer integer1 = integerIntegerHashMap.get(integer);
-//            System.out.println(integer+"        "+integer1);
-//        }
-//
-//        System.out.println(inorder.length);
 
         return helpr(0,inorder.length);
     }

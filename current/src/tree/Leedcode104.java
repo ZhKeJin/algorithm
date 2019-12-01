@@ -35,13 +35,15 @@ public class Leedcode104 {
         TreeNode root2 = new TreeNode(20);
         TreeNode root3 = new TreeNode(15);
         TreeNode root4 = new TreeNode(7);
+        TreeNode root5 = new TreeNode(8);
 
         root.left = root1;
         root.right = root2;
         root2.left = root3;
         root2.right = root4;
+        root4.right = root5;
 
-        System.out.println(maxDepth_1(root,0));
+        System.out.println(maxDepth(root));
 
     }
 
@@ -52,9 +54,9 @@ public class Leedcode104 {
             return 0;
         }
 
-        if(root.right==null&&root.left==null){
-            return 1;
-        }
+//        if(root.right==null&&root.left==null){
+//            return 1;
+//        }
 
 
         int rhigh = maxDepth(root.right);
