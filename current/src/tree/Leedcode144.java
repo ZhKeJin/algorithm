@@ -67,12 +67,20 @@ public class Leedcode144 {
         return null;
     }
 
-
+    /**
+     * 用队列实现是错的
+     * @param root
+     * @return
+     */
     public static List<Integer> preorderTraversal_2(TreeNode root) {
 
         LinkedList<TreeNode> queue = new LinkedList<>();
 
         LinkedList<Integer> integers = new LinkedList<>();
+
+        if (root == null) {
+            return integers;
+        }
 
         queue.add(root);
         while(!queue.isEmpty()){
@@ -82,7 +90,7 @@ public class Leedcode144 {
             if(treeNode.left!=null){
                 queue.add(treeNode.left);
             }
-            if(treeNode.left!=null){
+            if(treeNode.right!=null){
                 queue.add(treeNode.right);
             }
 
@@ -92,10 +100,11 @@ public class Leedcode144 {
     }
 
 
-
-
-
-
+    /**
+     * 树的先序只能用栈实现
+     * @param root
+     * @return
+     */
     public static List<Integer> preorderTraversal_1(TreeNode root) {
         LinkedList<TreeNode> stack = new LinkedList<>();
         LinkedList<Integer> output = new LinkedList<>();

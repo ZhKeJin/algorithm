@@ -1,12 +1,5 @@
 package array;
 
-import sun.rmi.server.InactiveGroupException;
-
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-import java.io.Serializable;
-import java.net.MulticastSocket;
-import java.net.StandardSocketOptions;
-import java.util.IntSummaryStatistics;
 
 /**
  * @author Zhangkj
