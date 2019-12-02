@@ -3,6 +3,9 @@ package main.java.com.itcom.service.Impl;
 import com.itcom.bean.Assess;
 import com.itcom.mapper.AssessMapper;
 import com.itcom.service.IAssessService;
+import main.java.com.itcom.bean.Assess;
+import main.java.com.itcom.mapper.AssessMapper;
+import main.java.com.itcom.service.IAssessService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -7,6 +7,8 @@ import com.itcom.bean.User;
 import com.itcom.service.IAssessService;
 import com.itcom.service.IManagerService;
 import com.itcom.service.IUserService;
+import main.java.com.itcom.service.IAssessService;
+import main.java.com.itcom.service.IManagerService;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

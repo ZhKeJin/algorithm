@@ -1,6 +1,7 @@
 package main.java.com.itcom.mapper;
 
-import com.itcom.bean.Assess;
+
+import main.java.com.itcom.bean.Assess;
 
 import java.util.List;
 
