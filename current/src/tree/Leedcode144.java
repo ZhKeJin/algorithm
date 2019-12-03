@@ -87,11 +87,11 @@ public class Leedcode144 {
 
             TreeNode treeNode = queue.pollFirst();
             integers.add(treeNode.val);
-            if(treeNode.left!=null){
-                queue.add(treeNode.left);
-            }
             if(treeNode.right!=null){
-                queue.add(treeNode.right);
+                queue.addFirst(treeNode.right);
+            }
+            if(treeNode.left!=null){
+                queue.addFirst(treeNode.left);
             }
 
         }
