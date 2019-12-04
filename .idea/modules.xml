@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/grammar/grammar.iml" filepath="$PROJECT_DIR$/grammar/grammar.iml" />
       <module fileurl="file://$PROJECT_DIR$/leedcode/leedcode.iml" filepath="$PROJECT_DIR$/leedcode/leedcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/parkmanager/parkmanager.iml" filepath="$PROJECT_DIR$/parkmanager/parkmanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ssm/springbootpark/springbootpark.iml" filepath="$PROJECT_DIR$/../ssm/springbootpark/springbootpark.iml" />
       <module fileurl="file://$PROJECT_DIR$/../java1/springbootpark/springbootpark.iml" filepath="$PROJECT_DIR$/../java1/springbootpark/springbootpark.iml" />
     </modules>
   </component>
