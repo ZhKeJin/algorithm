@@ -14,6 +14,10 @@ public class TreeNode {
         this.val = val;
     }
 
+    public TreeNode() {
+
+    }
+
     public static void bianli(TreeNode root){
 
         if(root!=null){
