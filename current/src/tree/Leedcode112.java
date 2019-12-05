@@ -69,4 +69,15 @@ public class Leedcode112 {
         return  hasPathSum(root.left,sum-root.val)||hasPathSum(root.right,sum-root.val)?true:false;
     }
 
+    public boolean hasPathSum_1(TreeNode root, int sum) {
+        if (root == null)
+            return false;
+
+        sum -= root.val;
+        if ((root.left == null) && (root.right == null))
+            return (sum == 0);
+        return hasPathSum_1(root.left, sum) || hasPathSum_1(root.right, sum);
+    }
+
+
 }
