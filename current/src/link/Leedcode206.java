@@ -33,7 +33,8 @@ public class Leedcode206 {
 
 
 
-        ListNode node = reverseList(head);
+//        ListNode node = reverseList_2(head);
+        ListNode node = reverseList_6(head);
         System.out.println(node.toString());
 
     }
@@ -61,6 +62,36 @@ public class Leedcode206 {
 
     }
 
+    public static ListNode reverseList_6(ListNode head) {
+
+        ListNode h1= null;
+
+        ListNode p=head;
+
+        while(head!=null){
+
+//            p =head;
+//            head= head.next;
+//            p.next = h1;
+//            h1 = p;
+
+
+            p.next = h1;
+            h1= p;
+
+            head= head.next;
+            System.out.println(p.next.val);
+
+            p = head;
+
+        }
+
+        return h1;
+    }
+
+
+
+
 
     /*
     非递归: 创建一个新的头节点，每次找到原来的头节点进行   头插法 到新的链表
@@ -74,6 +105,7 @@ public class Leedcode206 {
             head = head.next;
             p.next = head1;
             head1 = p;
+            System.out.println(head1.toString());
 
         }
 
