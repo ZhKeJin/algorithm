@@ -35,25 +35,62 @@ public class Leedcode107 {
 
 
     static List<List<Integer>> list= new ArrayList<>();
+    static List<Integer> list1= new ArrayList<>();
     public static void main(String[] args) {
 
         TreeNode root = new TreeNode(3);
         TreeNode root1 = new TreeNode(9);
         TreeNode root2 = new TreeNode(20);
-        TreeNode root3 = new TreeNode(15);
+//        TreeNode root3 = new TreeNode(15);
         TreeNode root4 = new TreeNode(7);
 
         root.left = root1;
         root.right = root2;
-        root2.left = root3;
+//        root2.left = root3;
         root2.right = root4;
 
-        list = levelOrderBottom(root);
+//        list = levelOrderBottom(root);
+//
+//        for (List<Integer> objects : list) {
+//
+//            System.out.println(objects);
+//        }
 
-        for (List<Integer> objects : list) {
+        List<Integer> list = levelOrderBottom_1(root);
 
-            System.out.println(objects);
+        for (Integer integer : list) {
+            System.out.println(integer);
         }
+
+
+    }
+
+
+    static List<Integer> levelOrderBottom_1(TreeNode root) {
+        if(root==null)return list1;
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+
+        queue.add(root);
+
+        while (!queue.isEmpty()){
+
+            List<Integer> l = new LinkedList<>();
+
+            int count = queue.size();
+            while(count>0){
+
+                TreeNode node = queue.peek();
+                queue.poll();
+                list1.add(node.val);
+                if(node.left!=null) queue.add(node.left);
+                if(node.right!=null) queue.add(node.right);
+                count--;
+            }
+        }
+
+        return list1;
+
+
     }
 
     static List<List<Integer>> levelOrderBottom(TreeNode root) {
