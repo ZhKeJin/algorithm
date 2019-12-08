@@ -5,6 +5,7 @@ package stack;
  * @date 2019-12-03-12:18
  */
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -12,6 +13,7 @@ import java.util.Stack;
 
  */
 public class JZ5 {
+
     Stack<Integer> stack1 = new Stack<Integer>();
     Stack<Integer> stack2 = new Stack<Integer>();
 
