@@ -10,6 +10,7 @@ import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @author Zhangkj
@@ -70,7 +71,8 @@ public class CollectionDemo {
         ///////////////////////////////////////
 //        AbstractQueuedSynchronizer;
 //
-//        ReentrantLock;
+//       ReentrantLock;
+//        ReentrantReadWriteLock;
 //
 //        CyclicBarrier;
 //
@@ -104,7 +106,7 @@ public class CollectionDemo {
 //        String;
 //        String a = new String("dasdf");
 
-  //      ConcurrentHashMap;
+        //ConcurrentHashMap;
 
         Object o = "a";
 
