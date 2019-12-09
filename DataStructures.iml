@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager">
-    <output url="file://E:/data/Java-算法与数据结构/代码/代码/DataStructures/bin" />
+    <output url="file://F:/java视频/Java-算法与数据结构/代码/代码/DataStructures/bin" />
     <exclude-output />
     <content url="file://E:/data/Java-算法与数据结构/代码/代码/DataStructures">
       <sourceFolder url="file://E:/data/Java-算法与数据结构/代码/代码/DataStructures/src" isTestSource="false" />
+    </content>
+    <content url="file://F:/java视频/Java-算法与数据结构/代码/代码/DataStructures">
+      <sourceFolder url="file://F:/java视频/Java-算法与数据结构/代码/代码/DataStructures/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="inheritedJdk" />
