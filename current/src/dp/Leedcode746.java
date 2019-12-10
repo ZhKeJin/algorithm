@@ -24,8 +24,8 @@ public class Leedcode746 {
 
         Leedcode746 leedcode746 = new Leedcode746();
 
-//        int[] ints = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
-        int[] ints = new int[]{0,0,1,1};
+        int[] ints = new int[]{1, 100, 1, 1, 1, 100, 1, 1, 1, 1};
+//        int[] ints = new int[]{0,0,1,1};
 //        System.out.println(leedcode746.minCostClimbingStairs(ints));
         System.out.println(leedcode746.minCostClimbingStairs_1(ints));
 
@@ -57,16 +57,11 @@ public class Leedcode746 {
     }
 
 
-
-
-
-
     private static int getnum(int i) {
 
         if(i==1||i==2){
             return i;
         }
-
 
         return getnum(i-1)+getnum(i-2);
 
