@@ -7,6 +7,10 @@ import java.util.Stack;
  * @author Zhangkj
  * @date 2019-12-08-16:15
  */
+
+/**
+ * 找到链表中的公共节点
+ */
 public class JZFindFirstCommonNode {
 
     public static void main(String[] args) {
