@@ -22,7 +22,8 @@ public class Leedcode121 {
         int[] ints = new int[]{7,1,5,3,6,4};
 
 
-        System.out.println(leedcode121.maxProfit(ints));
+//        System.out.println(leedcode121.maxProfit(ints));
+        System.out.println(leedcode121.maxProfit_1(ints));
 
     }
 
@@ -42,6 +43,30 @@ public class Leedcode121 {
     5678
     9 10 11 12
     13 14 15 16*/
+
+
+  /*
+  一次遍历：用多个变量
+   */
+   public int maxProfit_1(int[] prices) {
+
+        int minnum = Integer.MAX_VALUE;
+        int maxpro = 0;
+
+       for (int i = 0; i < prices.length; i++) {
+
+           if(prices[i]<minnum){
+               minnum = prices[i];
+           }
+           else if(prices[i]-minnum>maxpro){
+               maxpro = prices[i]-minnum;
+           }
+
+       }
+
+       return maxpro;
+   }
+
 
 
 
