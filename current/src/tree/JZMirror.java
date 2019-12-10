@@ -4,6 +4,7 @@ package tree;
  * @author Zhangkj
  * @date 2019-12-08-15:35
  */
+
 public class JZMirror {
 
 
@@ -27,11 +28,14 @@ public class JZMirror {
 
         JZMirror jzMirror = new JZMirror();
 
-        jzMirror.Mirror(root);
-//        jzMirror.Mirror_2(root);
+//        jzMirror.Mirror(root);
+        jzMirror.Mirror_2(root);
         TreeNode.bianli(root);
     }
 
+    /**
+     * 操作给定的二叉树，将其变换为源二叉树的镜像。
+     */
 
     public void Mirror_2(TreeNode root) {
 

@@ -89,40 +89,9 @@ public class JZHasSubtree {
         return doesTree1HasTree2(root1, root2) || HasSubtree(root1.left, root2) || HasSubtree(root1.right, root2);
     }
 
-
-
     /*
-    子结构
-     */
-    public boolean HasSubtree_3(TreeNode root1, TreeNode root2) {
-        if (root1 == null || root2 == null) {
-            return false;
-        }
-        return judgeSubTree(root1, root2) ||
-                judgeSubTree(root1.left, root2) ||
-                judgeSubTree(root1.right, root2);
-    }
-
-    private boolean judgeSubTree_3(TreeNode root1, TreeNode root2) {
-        if (root2 == null) {
-            return true;
-        }
-        if (root1 == null) {
-            return false;
-        }
-        if (root1.val != root2.val) {
-            return judgeSubTree_3(root1.left, root2) ||
-                    judgeSubTree(root1.right, root2);
-        }
-        return judgeSubTree_3(root1.left, root2.left) &&
-                judgeSubTree_3(root1.right, root2.right);
-    }
-
-
-
-    /*
-    子树：从根节点的左右的两支的其中的一支
-     */
+       子树：从根节点的左右的两支的其中的一支
+        */
     public boolean HasSubtree_2(TreeNode root1, TreeNode root2) {
         if (root1 == null || root2 == null) {
             return false;
@@ -148,5 +117,36 @@ public class JZHasSubtree {
         return judgeSubTree(root1.left, root2.left) &&
                 judgeSubTree(root1.right, root2.right);
     }
+
+
+    /*
+    子结构
+     */
+    public boolean HasSubtree_3(TreeNode root1, TreeNode root2) {
+        if (root1 == null || root2 == null) {
+            return false;
+        }
+        return judgeSubTree(root1, root2) ||
+                judgeSubTree(root1.left, root2) ||
+                judgeSubTree(root1.right, root2);
+    }
+
+    private boolean judgeSubTree_3(TreeNode root1, TreeNode root2) {
+        if (root2 == null) {
+            return true;
+        }
+        if (root1 == null) {
+            return false;
+        }
+        if (root1.val != root2.val) {
+            return judgeSubTree_3(root1.left, root2) ||
+                    judgeSubTree_3(root1.right, root2);
+        }
+        return judgeSubTree_3(root1.left, root2.left) &&
+                judgeSubTree_3(root1.right, root2.right);
+    }
+
+
+
 
 }
