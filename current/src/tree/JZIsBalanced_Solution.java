@@ -29,6 +29,7 @@ public class JZIsBalanced_Solution {
         JZIsBalanced_Solution jzIsBalanced_solution = new JZIsBalanced_Solution();
 
         boolean b = jzIsBalanced_solution.IsBalanced_Solution(root);
+        System.out.println(b);
 
 
 
