@@ -40,9 +40,7 @@ public class Jz59 {
 
         for (int i = 0; i < num.length; i++) {
 
-//            if(linkedList.isEmpty()){
-//                linkedList.add(i);
-//            }
+
 
             if(!linkedList.isEmpty()&&i-linkedList.peek()>=size){
                 linkedList.poll();
