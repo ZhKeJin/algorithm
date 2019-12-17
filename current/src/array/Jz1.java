@@ -37,10 +37,10 @@ public class Jz1 {
         }
 
 
-//        boolean find = Find(6, arr);
-        boolean find = Find_1(6, arr);
+        boolean find = Find(6, arr);
+//        boolean find = Find_1(6, arr);
         System.out.println(find);
-
+//
     }
 
 
@@ -66,27 +66,49 @@ public class Jz1 {
         return false;
     }
 
-    public static boolean Find_1(int target, int[][] array) {
-        int row = array.length;
-        int col = array[0].length;
-        if (row == 0 || col == 0)
-            return false;
-        if (target < array[0][0] || target > array[row - 1][col - 1])
-            return false;
-        int i = 0;
-        int j = col - 1;
-        while (i < row && j >= 0) {
-            if (array[i][j] > target) {
-                j--;
-            } else if (array[i][j] < target) {
-                i++;
-            } else {
+//    public static boolean Find_1(int target, int[][] array) {
+//        int row = array.length;
+//        int col = array[0].length;
+//        if (row == 0 || col == 0)
+//            return false;
+//        if (target < array[0][0] || target > array[row - 1][col - 1])
+//            return false;
+//        int i = 0;
+//        int j = col - 1;
+//        while (i < row && j >= 0) {
+//            if (array[i][j] > target) {
+//                j--;
+//            } else if (array[i][j] < target) {
+//                i++;
+//            } else {
+//                return true;
+//            }
+//        }
+//
+//        return false;
+//
+//
+//    }
+
+    public boolean Find_2(int target, int [][] array) {
+
+        int i= array[0].length;
+        int j=0;
+
+        while(j<array[0].length && i>=0){
+
+            if(target < array[j][i]){
+                i--;
+            }else if(target>array[j][i]){
+                j++;
+            }else{
                 return true;
             }
+
+
         }
 
         return false;
-
 
     }
 
