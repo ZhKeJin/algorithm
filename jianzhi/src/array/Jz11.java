@@ -22,34 +22,32 @@ public class Jz11 {
         System.out.println(i);
     }
 
-    public int minNumberInRotateArray(int [] array) {
 
-        int i = 0;
-        int j = array.length-1;
-     //   int mid = (i+j)/2;
-        while(i<=j){
+        public int minNumberInRotateArray(int [] array) {
+            int i = 0;
+            int j = array.length-1;
+            while(i<=j){
 
-            if(i+1==j){
-                return array[j];
+                if(i+1==j){
+                    return array[j];
+
+                }
+                int mid = (i+j)/2;
+                if(array[mid]>=array[i]){
+                    i = mid;
+
+
+                }else{
+
+                    j = mid;
+
+                }
 
             }
-            int mid = (i+j)/2;
-            if(array[mid]>array[i]){
-                i = mid;
 
-
-            }
-            if(array[mid]<array[i]){
-
-                j = mid;
-
-            }
+            return 0;
 
         }
 
-        return 0;
-
-
     }
 
-}
