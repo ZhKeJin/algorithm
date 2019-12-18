@@ -70,19 +70,19 @@ public class Leedcode206 {
 
         while(head!=null){
 
-//            p =head;
-//            head= head.next;
-//            p.next = h1;
-//            h1 = p;
-
-
-            p.next = h1;
-            h1= p;
-
+            p =head;
             head= head.next;
-            System.out.println(p.next.val);
+            p.next = h1;
+            h1 = p;
 
-            p = head;
+
+//            p.next = h1;
+//            h1= p;
+//
+//            head= head.next;
+//            System.out.println(p.next.val);
+//
+//            p = head;
 
         }
 

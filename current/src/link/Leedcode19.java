@@ -31,7 +31,7 @@ public class Leedcode19 {
 
 
 
-        ListNode temp = removeNthFromEnd(head,8);
+        ListNode temp = removeNthFromEnd_2(head,8);
 
         while(temp!=null){
             System.out.print(temp.val+"  ");
@@ -69,7 +69,7 @@ public class Leedcode19 {
 
 
 
-    public static ListNode removeNthFromEnd_1(ListNode head, int n) {
+    public static ListNode removeNthFromEnd_2(ListNode head, int n) {
 
         ListNode q=head,p=head;
 
@@ -97,6 +97,8 @@ public class Leedcode19 {
 
         return head;
     }
+
+
 
 
 
