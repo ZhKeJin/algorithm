@@ -61,38 +61,38 @@ public class Jz38 {
     }
 
 
-
     public ArrayList<String> Permutation_1(String str) {
 
-        ArrayList<String>  list = new ArrayList<>();
+        ArrayList<String> list = new ArrayList<>();
 
-        perhelp(list,str.toCharArray(),0);
+
+        helpper(str.toCharArray(),0,list);
 
         return list;
 
     }
 
-    private void perhelp(ArrayList<String> list, char[] toCharArray, int i) {
+    private void helpper(char[] str, int i, ArrayList<String> list) {
 
-        if(i==toCharArray.length-1){
-            list.add(toCharArray.toString());
-        }else {
+
+        if(i==str.length-1){
+            list.add(str.toString());
+        }
+
+        for (int j = i; j <str.length-1; j++) {
 
             HashSet<Character> characters = new HashSet<>();
 
-            for (int j = i; j < toCharArray.length; j++) {
+            if(!characters.contains(str[i])){
 
+                swap(str,i,j);
 
-                if (!characters.contains(toCharArray[j])) {
-                    characters.add(toCharArray[j]);
-                    swap(toCharArray, i, j);
-                    perhelp(list, toCharArray, j + 1);
-                    swap(toCharArray, j, i);
-                }
+                helpper(str,i+1,list);
+                swap(str,j,i);
+
             }
+
         }
-
-
 
 
     }
