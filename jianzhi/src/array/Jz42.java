@@ -5,10 +5,6 @@ package array;
  * @date 2019-12-15-11:39
  */
 
-import javax.swing.*;
-import java.net.DatagramPacket;
-import java.net.JarURLConnection;
-
 /**
  * 例如:{6,-3,-2,7,-15,1,2,2},连续子向量的最大和为 8(从第0个开始,到第3个为止)。给一个数组，返回它的最大连续子序列的和，你会不会被他忽悠住？(子向量的长度至少是1)
  */
