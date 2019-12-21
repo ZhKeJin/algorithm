@@ -19,6 +19,20 @@ public class Jz45 {
 
     public static void main(String[] args) {
 
+        ArrayList<Integer> arrayList = new ArrayList<>();
+
+        arrayList.add(1);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(0);
+
+
+        Collections.sort(arrayList);
+
+        for (Integer integer : arrayList) {
+            System.out.println(integer);
+        }
+
         String string = new Jz45().PrintMinNumber(new int[]{3, 32, 321});
 
         System.out.println(string);
@@ -36,21 +50,27 @@ public class Jz45 {
             list.add(String.valueOf(numbers[i]));
 
         }
-//        Collections.sort(list, new Comparator<Integer>(){
-//
-//            public int compare(Integer str1,Integer str2){
-//                String s1=str1+""+str2;
-//                String s2=str2+""+str1;
-//                return s1.compareTo(s2);
-//            }
-//        });
+
+        Collections.sort(list, new Comparator<String>(){
+
+            public int compare(String str1,String str2){
+                String s1=str1+""+str2;
+                String s2=str2+""+str1;
+                return s1.compareTo(s2);
+            }
+        });
 
         //降序
-        Collections.sort(list);
+      //  Collections.sort(list);
 
-        for (int i = list.size()-1; i >=0 ; i--) {
+//        for (int i = list.size()-1; i >=0 ; i--) {
+//            s+=list.get(i);
+//
+//        }
+
+
+        for (int i = 0; i < list.size(); i++) {
             s+=list.get(i);
-
         }
 
         return s;
