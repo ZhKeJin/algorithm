@@ -1,6 +1,7 @@
 package array;
 
 import javax.sound.midi.InvalidMidiDataException;
+import java.util.Scanner;
 
 /**
  * @author Zhangkj
@@ -11,6 +12,11 @@ import javax.sound.midi.InvalidMidiDataException;
  * 	调整数组顺序使奇数位于偶数前面
  */
 public class Jz21 {
+
+//    public static void main(String[] args) {
+//        new System();
+//        new Scanner(System.in);
+//    }
 
     public void reOrderArray(int [] array) {
 
@@ -28,7 +34,7 @@ public class Jz21 {
                     for (int k = i; k > index; k--) {
                         array[k] = array[k - 1];
                     }
-
+                    array[index] = ss;
                     index++;
 
                 }
@@ -37,7 +43,7 @@ public class Jz21 {
 
             } else {
                 if (i == 0) {
-                    index = 1;
+                    index = 0;
                 }
                 if (index == -1) {
                     index = i;
