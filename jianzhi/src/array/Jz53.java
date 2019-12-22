@@ -33,6 +33,8 @@ public class Jz53 {
         }
         return 0;
     }
+
+
     //递归写法
     private int getFirstK(int [] array , int k, int start, int end){
         if(start > end){
@@ -50,6 +52,8 @@ public class Jz53 {
             return mid;
         }
     }
+
+
     //循环写法
     private int getLastK(int [] array , int k, int start, int end){
         int length = array.length;
@@ -68,4 +72,7 @@ public class Jz53 {
         }
         return -1;
     }
+
+
+
 }
