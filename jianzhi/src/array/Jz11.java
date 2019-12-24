@@ -17,10 +17,50 @@ public class Jz11 {
 
         System.out.println((1+2)/2);
         Jz11 jz11 = new Jz11();
-        int i = jz11.minNumberInRotateArray(new int[]{3, 4, 5, 1, 2});
+        int i = jz11.minNumberInRotateArray_1(new int[]{3, 4, 5, 1, 2});
 
         System.out.println(i);
     }
+
+
+
+
+    public int minNumberInRotateArray_1(int [] array) {
+
+        int l = 0;
+        int r = array.length-1;
+
+        while(l<r){
+
+            if(l+1==r){
+                return r;
+            }
+
+            int mid = (l+r)/2;
+
+            if(array[l]>=array[mid]){
+                r = mid;
+            }else{
+                l = mid;
+            }
+
+        }
+
+
+        return -1;
+
+
+
+    }
+
+
+
+
+
+
+
+
+
 
 
         public int minNumberInRotateArray(int [] array) {
