@@ -4,6 +4,10 @@ package array;
  * @author Zhangkj
  * @date 2019-12-17-17:37
  */
+
+/**
+ * 二维数组进行查找
+ */
 public class Jz4 {
     public static boolean Find_1(int target, int[][] array) {
         int row = array.length;
