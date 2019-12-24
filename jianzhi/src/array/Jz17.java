@@ -6,7 +6,7 @@ package array;
  */
 
 /**
- * 打印 N 位数
+ *  打印  N 位数
  */
 public class Jz17 {
 
