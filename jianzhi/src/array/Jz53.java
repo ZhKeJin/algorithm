@@ -5,6 +5,11 @@ package array;
  * @date 2019-12-13-22:17
  */
 
+import com.sun.deploy.panel.ITreeNode;
+import sun.rmi.server.InactiveGroupException;
+
+import java.lang.annotation.Target;
+
 /**
  * 统计一个数字在排序数组中出现的次数。
  */
@@ -14,10 +19,75 @@ public class Jz53 {
 
         Jz53  jzGetpaixuNumberOfK = new Jz53 ();
         int i = jzGetpaixuNumberOfK.GetNumberOfK(new int[]{1, 1, 1, 1, 1, 2, 3, 4, 5, 5, 6, 6, 6, 6}, 6);
+        int j = jzGetpaixuNumberOfK.GetNumberOfK_1(new int[]{1, 1, 1, 1, 1, 2, 3, 4, 5, 5, 6, 6, 6, 6}, 6);
 
         System.out.println(i);
+        System.out.println(j);
     }
 
+
+    public int GetNumberOfK_1(int [] array , int k) {
+
+        int left = 0;
+        int right = array.length-1;
+
+        int first = leftsearch(array, left,right, k);
+        int end=  rightsearch(array, left,right,k);
+
+
+        if(first!=-1&& end!=-1){
+            return end-first+1;
+        }
+
+        return -1;
+
+
+    }
+
+    private int rightsearch(int[] array, int left, int right,int target) {
+
+        int mid = (left+right)>>1;
+        while(left<=right){
+
+            if(array[mid]>target){
+                right = mid-1;
+            }else if(array[mid]<target){
+                left = mid+1;
+            }else if(array[mid]==target&&(mid+1)<=right&&array[mid+1]==target){
+                left = mid+1;
+            }else{
+                return mid;
+            }
+
+            mid = (left+right)>>1;
+
+        }
+
+        return -1;
+
+
+    }
+
+    private int leftsearch(int[] array, int left, int right,int target) {
+
+        int mid = (left+right)>>1;
+        while(left<=right){
+
+            if(array[mid]>target){
+                right = mid-1;
+            }else if(array[mid]<target){
+                left = mid+1;
+            }else if(array[mid]==target&&(mid-1)>=left&&array[mid-1]==target){
+                left = mid+1;
+            }else{
+                return mid;
+            }
+            mid = (left+right)>>1;
+
+        }
+
+        return -1;
+    }
 
 
     public int GetNumberOfK(int [] array , int k) {
