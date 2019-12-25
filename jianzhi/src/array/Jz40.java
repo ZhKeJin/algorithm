@@ -19,8 +19,8 @@ public class Jz40 {
 
 
     public static void main(String[] args) {
-//        ArrayList<Integer> arrayList = new Jz40().GetLeastNumbers_Solution(new int[]{2, 3, 5, 1, 9, 6, 4, 0}, 4);
-        ArrayList<Integer> arrayList = new Jz40().GetLeastNumbers_Solution_1(new int[]{2, 3, 5, 1, 9, 6, 4, 0}, 4);
+        ArrayList<Integer> arrayList = new Jz40().GetLeastNumbers_Solution(new int[]{2, 3, 5, 1, 9, 6, 4, 0}, 4);
+//        ArrayList<Integer> arrayList = new Jz40().GetLeastNumbers_Solution_1(new int[]{2, 3, 5, 1, 9, 6, 4, 0}, 4);
 
         for (Integer integer : arrayList) {
             System.out.println(integer);
