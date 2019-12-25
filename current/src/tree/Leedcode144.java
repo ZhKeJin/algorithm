@@ -7,6 +7,7 @@ package tree;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * 先序
@@ -118,6 +119,27 @@ public class Leedcode144 {
         return output;
     }
 
+    public static List<Integer> preorderTraversal_3(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<>();
+        LinkedList<Integer> output = new LinkedList<>();
+        if (root == null) {
+            return output;
+        }
+
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            System.out.println(node.val+"....");
+            output.add(node.val);
+            if (node.right != null) {
+                stack.add(node.right);
+            }
+            if (node.left != null) {
+                stack.add(node.left);
+            }
+        }
+        return output;
+    }
 
 
 

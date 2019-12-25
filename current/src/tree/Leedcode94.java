@@ -24,11 +24,7 @@ import java.util.Stack;
  *  *    15   7
  *  * 返回其自底向上的层次遍历为：
  *  *
- *  * [
- *  *   [15,7],
- *  *   [9,20],
- *  *   [3]
- *  * ]
+
  */
 public class Leedcode94 {
 
@@ -122,9 +118,9 @@ public class Leedcode94 {
 
             arrayList.add(pop.val);
 
-            if (pop.right != null) {
+
                 root = pop.right;
-            }
+
 
         }
 
