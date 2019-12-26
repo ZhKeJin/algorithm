@@ -42,8 +42,8 @@ public class Leedcode121 extends AbstractMap {
         for (int i = prices.length-2; i >=0 ; i--) {
 
             System.out.println(prices[i]);
-            max = Math.max(prices[i],max);
-            dp[i] = max;
+            dp[i] = Math.max(prices[i],dp[i+1]);
+            //dp[i] = max;
 
         }
 
