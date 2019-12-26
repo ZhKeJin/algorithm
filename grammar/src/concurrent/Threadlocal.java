@@ -30,7 +30,7 @@ public class Threadlocal {
 
         System.out.println(random.nextInt(5));
 
-   //     LinkedList;
+//        LinkedList;
 //
 //        LockSupport lockSupport = new LockSupport();
 //
@@ -80,13 +80,13 @@ public class Threadlocal {
 //        CyclicBarrier;
 //          CountDownLatch;
 //         Exchanger;
-
-
+//
+//
 //        ForkJoinTask;
 //        RecursiveTask;
 //        RecursiveAction;
 //        ForkJoinPool;
- //       CyclicBarrier;
+//        CyclicBarrier;
 
 
         int[][] a = new int[5][];
