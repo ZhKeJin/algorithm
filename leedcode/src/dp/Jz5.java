@@ -5,6 +5,9 @@ package dp;
  * @date 2019-12-23-22:48
  */
 
+import com.sun.deploy.panel.ITreeNode;
+
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.EventListener;
 
 /**
@@ -21,6 +24,14 @@ public class Jz5 implements EventListener {
         String s = jz5.longestPalindrome("abc435cba");
 
         System.out.println(s);
+
+
+        System.out.println("...................");
+
+
+        String string = jz5.getString("ababcdefacb", "acaabcdefcab");
+
+        System.out.println(string);
 
     }
 
@@ -51,6 +62,55 @@ public class Jz5 implements EventListener {
 
         return s.substring(maxEnd - maxLen + 1, maxEnd + 1);
     }
+
+
+
+
+    public String getString(String s1,String s2){
+
+        int[][] ints = new int[s1.length()][s2.length()];
+
+        int maxlen =0;
+        int maxindex = 0;
+
+        for (int i = 0; i < s1.length(); i++) {
+
+            for (int j = 0; j < s2.length(); j++) {
+
+                if(s1.charAt(i) == s2.charAt(j)){
+
+                    if(i==0 || j==0){
+
+                        ints[i][j] = 1;
+                    }else{
+
+                        ints[i][j] = ints[i-1][j-1]+1;
+
+//                        maxlen = Math.max(ints[i][j],maxlen);
+//
+//                        maxindex = i;
+                    }
+                }
+
+                if(ints[i][j]>maxlen){
+                    maxlen = ints[i][j];
+                    maxindex = i;
+                }
+
+            }
+
+        }
+
+        return s1.substring(maxindex-maxlen+1,maxindex+1);
+
+
+
+    }
+
+
+
+
+
 }
 
 
