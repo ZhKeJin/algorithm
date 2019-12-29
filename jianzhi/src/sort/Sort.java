@@ -7,6 +7,10 @@ import java.util.Arrays;
  * @author Zhangkj
  * @date 2019-12-23-16:58
  */
+
+/**
+ * 快排
+ */
 public class Sort {
 
     public static void main(String[] args) {
